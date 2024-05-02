@@ -18,7 +18,11 @@ const LINKING_ERROR =
       }
     );
 
-function authenticate(opts:{reason:string}):Promise<any>{
+function authenticate(opts:{reason:string,description?:string}):Promise<any>{
+    if(Platform.OS == "android") {
+      return DeviceAuth.authenticate(opts.reason,opts.description||" ")
+            .catch((error:string)=>Promise.reject(createError(error))) 
+    }
     return DeviceAuth.authenticate(opts.reason)
             .catch((error:string)=>Promise.reject(createError(error)))
 }

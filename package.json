@@ -1,6 +1,6 @@
 {
   "name": "@nmh/react-native-device-auth",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React Native KeyguardManager And LocalAuthentication Lib (Android and Ios)",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
