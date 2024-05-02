@@ -81,7 +81,7 @@ public class DeviceAuthModule extends ReactContextBaseJavaModule {
     // Store the promise to resolve/reject when picker returns data
     authPromise = promise;
     try {
-      final Intent authIntent = mKeyguardManager.createConfirmDeviceCredentialIntent(reason, description);
+      final Intent authIntent = mKeyguardManager.createConfirmDeviceCredentialIntent(reason, " ");
       currentActivity.startActivityForResult(authIntent, AUTH_REQUEST);
     } catch (Exception e) {
       authPromise.reject(E_FAILED_TO_SHOW_AUTH, e);

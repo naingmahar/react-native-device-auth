@@ -19,7 +19,7 @@ const LINKING_ERROR =
     );
 
 function authenticate(opts:{reason:string}):Promise<any>{
-    return DeviceAuth.authenticateWithPasscode(opts.reason)
+    return DeviceAuth.authenticate(opts.reason)
             .catch((error:string)=>Promise.reject(createError(error)))
 }
 
