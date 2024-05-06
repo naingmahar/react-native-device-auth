@@ -12,16 +12,16 @@ npm install @nmh/react-native-device-auth
 
 1. Insert the following lines `android/app/src/AndroidManifest.xml`:
     ```
-<uses-permission android:name="android.permission.USE_FINGERPRINT" />
-<uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
     ```
 
 #### IOS
 
 1. Insert the following lines `ios/project/info.plist`:
     ```
-<key>NSFaceIDUsageDescription</key>
-<string>Enabling Face ID allows you quick and secure access to your account.</string>
+    <key>NSFaceIDUsageDescription</key>
+    <string>Enabling Face ID allows you quick and secure access to your account.</string>
     ```
 
 
